@@ -8,15 +8,53 @@
     <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-<header class="header">
-    <div class="container">
-        <div class="burger">
-            <span class="burger__line"></span>
-            <span class="burger__line"></span>
-            <span class="burger__line"></span>
+<div class="content-wrapper">
+
+    <header class="header">
+        <div class="container">
+            <div class="burger">
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+                <span class="burger__line"></span>
+            </div>
         </div>
-    </div>
-</header>
+    </header>
+
+    <main class="main-content">
+        <aside class="vertical-text">
+            <p>Социальные сети</p>
+            <div class="line-wrapper">
+
+                <hr class="long-line">
+            </div>
+            <div class="vertical-social">
+
+                <a href="https://github.com" class="vertical__social-link">
+                    <img src="images/social_assets/Github.svg" alt="github" class="social__github"/>
+                </a>
+                <a href="https://instagram.com" class="vertical__social-link">
+                    <img src="images/social_assets/Instagram.svg" alt="instagram" class="social__instagram"/>
+                </a>
+                <a href="https://facebook.com" class="vertical__social-link">
+                    <img src="images/social_assets/Facebook.svg" alt="facebook" class="social__facebook"/>
+                </a>
+            </div>
+        </aside>
+        <div class="container">
+            <section class="introduction">
+                <h1 class="introduction__title">
+                    Меня зовут Александра Смит
+                </h1>
+                <h2>Я web-разработчик из города Москва</h2>
+            </section>
+            <section class="buttons">
+                <button class="btn btn--portfolio">Портфолио</button>
+                <button class="btn btn--about">Про меня</button>
+            </section>
+
+        </div>
+    </main>
+</div>
 <nav class="sidebar">
     <button class="sidebar__close">&times;</button>
     <ul class="sidebar__list">
@@ -28,26 +66,18 @@
         <li class="sidebar__item"><a href="#" class="sidebar__link">КОНТАКТЫ</a></li>
     </ul>
     <div class="sidebar__social">
-        <a href="https://github.com" class="sidebar__social-link">GitHub</a>
-        <a href="https://instagram.com" class="sidebar__social-link">Instagram</a>
-        <a href="https://facebook.com" class="sidebar__social-link">Facebook</a>
+
+        <a href="https://github.com" class="sidebar__social-link">
+            <img src="images/social_assets/Github.svg" alt="github" class="social__github"/>
+        </a>
+        <a href="https://instagram.com" class="sidebar__social-link">
+            <img src="images/social_assets/Instagram.svg" alt="instagram" class="social__instagram"/>
+        </a>
+        <a href="https://facebook.com" class="sidebar__social-link">
+            <img src="images/social_assets/Facebook.svg" alt="facebook" class="social__facebook"/>
+        </a>
     </div>
 </nav>
-<main class="main-content">
-    <div class="container">
-        <section class="introduction">
-            <h1 class="introduction__title">
-                Меня зовут Александра Смит
-            </h1>
-            <h2>Я web-разработчик из города Москва</h2>
-        </section>
-        <section class="buttons">
-            <button class="btn btn--portfolio">Портфолио</button>
-            <button class="btn btn--about">Про меня</button>
-        </section>
-
-    </div>
-</main>
 <script src="js/main.js"></script>
 </body>
 </html>
