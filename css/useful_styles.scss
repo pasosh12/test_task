@@ -1,84 +1,93 @@
 $primary-color: #ffa501;
+
 .useful-section {
   padding: 20px;
   background-color: #f9f9f9;
-  //display: flex;
-  //flex-direction: row;
-  //display: block;
 
-  h2{
+  h2 {
     margin: 20px auto;
     text-align: center;
   }
+
   .flex-row {
     display: flex;
     flex-direction: row;
+    justify-content: center;
   }
 
   .container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    width: 50%;
   }
 
   .timeline {
     position: relative;
-    padding: 20px 0;
-    width: 80%;
+    width: 100%;
 
-    &::after {
+    &::before {
       content: '';
       position: absolute;
-      //left: 50%;
-      top: 0;
+      left: 6.5px;
+      top: 7.5px;
       bottom: 0;
       width: 2px;
-      background-color: #ddd;
-      //transform: translateX(-50%);
+      background-color: black;
+      transform: translateX(2%);
     }
 
-    h3{
-      margin-left:60px;
+    .after-circle {
+      width: 15px;
+      height: 15px;
+      background-color: $primary-color;
+      border-radius: 50%;
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 1000;
     }
+
+    h3 {
+      margin: 0 60px 20px;
+    }
+
     .timeline-item {
       display: flex;
-      //justify-content: flex-start;
-      align-items: center;
-      margin: 20px 0;
-      min-width: 418px;
+      align-items: flex-start;
+      margin-top: 20px;
       position: relative;
 
       .circle {
         width: 36px;
         height: 36px;
         background-color: $primary-color;
-        //border: 3px solid $primary-color;
         border-radius: 50%;
         position: absolute;
-        //left: 25%;
-        //margin-left: 60px;
-        top:10%;
-        transform: translateX(60px);
+        left: 50px;
+        z-index: 10;
+        overflow: visible;
+
+        &::before {
+          content: '';
+          position: absolute;
+          width: 42px;
+          height: 2px;
+          background-color: black;
+          top: 50%;
+          left: -42px;
+          transform: translateY(-50%);
+          z-index: 5;
+        }
       }
 
       .content {
-        padding: 10px 20px;
-        //background-color: #fff;
-        //border-radius: 5px;
-        //box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        padding: 0 20px;
         margin-left: 60px;
-        width: 70%;
-        .title{
+        width: calc(100% - 120px);
+        .title {
           padding-left: 20px;
           padding-bottom: 12px;
           font-size: 14px;
         }
       }
-
-      //&:nth-child(odd) .content {
-      //  margin-left: 0;
-      //  margin-right: 60px;
-      //}
     }
   }
 }
