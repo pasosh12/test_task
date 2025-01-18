@@ -1,22 +1,68 @@
 $primary-color: #ffa501;
 
-.useful-section {
-  padding: 20px;
+.experience-section {
+  padding: 60px 20px;
   background-color: #f9f9f9;
+  overflow-y: visible;
+
+
+  .section-wrapper {
+    position: relative;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px 0;
+    max-width: 1140px;
+  }
 
   h2 {
     margin: 20px auto;
-    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+
+    // title line
+    &::after {
+      content: '';
+      width: 50px;
+      height: 3px;
+      background-color: $primary-color;
+      margin: 10px auto 0;
+    }
   }
+
+  .title-circle {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 18px);
+    width: 36px;
+    height: 36px;
+    background-color: $primary-color;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 10;
+  }
+
+  .title-circle-text {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    z-index: 11;
+  }
+
 
   .flex-row {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    flex-wrap: wrap;
   }
 
   .container {
     width: 50%;
+    box-sizing: border-box;
   }
 
   .timeline {
@@ -34,7 +80,7 @@ $primary-color: #ffa501;
       transform: translateX(2%);
     }
 
-    .after-circle {
+    .top-circle {
       width: 15px;
       height: 15px;
       background-color: $primary-color;
@@ -54,6 +100,8 @@ $primary-color: #ffa501;
       align-items: flex-start;
       margin-top: 20px;
       position: relative;
+      flex-grow: 1;
+      max-width: 1140px;
 
       .circle {
         width: 36px;
@@ -68,7 +116,7 @@ $primary-color: #ffa501;
         &::before {
           content: '';
           position: absolute;
-          width: 42px;
+          width: 45px;
           height: 2px;
           background-color: black;
           top: 50%;
@@ -78,16 +126,47 @@ $primary-color: #ffa501;
         }
       }
 
+      .icon {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        z-index: 11;
+      }
+
       .content {
         padding: 0 20px;
         margin-left: 60px;
         width: calc(100% - 120px);
+        word-wrap: break-word;
+        word-break: break-word;
         .title {
           padding-left: 20px;
           padding-bottom: 12px;
           font-size: 14px;
+          word-wrap: break-word;
+          word-break: break-word;
         }
       }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .container {
+      width: 100%;
+      padding: 10px;
+    }
+    .timeline-item .content {
+      margin-left: 40px;
+      width: calc(100% - 80px);
+    }
+    .timeline::before {
+      left: 3.5px;
+    }
+    .circle {
+      left: 0;
+    }
+    h3 {
+      margin: 0 30px 20px;
     }
   }
 }
